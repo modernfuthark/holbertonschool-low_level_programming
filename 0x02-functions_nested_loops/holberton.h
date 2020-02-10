@@ -1,7 +1,7 @@
-#ifndef "HOLBETON"
-#define "HOLBERTON"
+#ifndef HOLBETON_H
+#define HOLBERTON_H
 
-void print_alphabet(void);
 int _putchar(char c);
+void print_alphabet(void);
 
 #endif
