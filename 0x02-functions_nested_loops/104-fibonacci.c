@@ -14,11 +14,11 @@ int main(void)
 	long double result = 0;
 	int i;
 
-	for (i = 0; i < 98; i++)
+	for (i = 0; i < 99; i++)
 	{
 		result = first + second;
 		printf("%.0Lf", result);
-		if (i != 97)
+		if (i != 98)
 			printf(", ");
 		first = second;
 		second = result;
