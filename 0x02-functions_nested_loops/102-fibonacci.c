@@ -9,8 +9,8 @@
 
 int main(void)
 {
-	unsigned long int first = 1;
-	unsigned long int second = 0;
+	unsigned long int first = 0;
+	unsigned long int second = 1;
 	unsigned long int result = 0;
 	int i;
 
