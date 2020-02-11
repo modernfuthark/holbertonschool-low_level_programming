@@ -9,16 +9,16 @@
 
 int main(void)
 {
-	long double first = 0;
-	long double second = 1;
-	long double result = 0;
+	double first = 0;
+	double second = 1;
+	double result = 0;
 	int i;
 
-	for (i = 0; i < 98; i++)
+	for (i = 1; i <= 98; i++)
 	{
 		result = first + second;
-		printf("%.0Lf", result);
-		if (i != 97)
+		printf("%.0lf", result);
+		if (i != 98)
 			printf(", ");
 		first = second;
 		second = result;
