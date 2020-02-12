@@ -1,9 +1,8 @@
 #include "holberton.h"
 /**
+ * jack_bauer - Print the minutes of the day
  *
- *
- *
- *
+ * Return: Nothing, function is void
  */
 
 void jack_bauer(void)
