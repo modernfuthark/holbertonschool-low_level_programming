@@ -1,9 +1,8 @@
 #include "holberton.h"
 /**
- *
- *
- *
- *
+ * print_diagonal - Print a diagonal line of length n
+ * @n: Length of line
+ * Return: Nothing, funtion is void
  */
 
 void print_diagonal(int n)
