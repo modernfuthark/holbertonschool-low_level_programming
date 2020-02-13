@@ -10,7 +10,7 @@ void print_line(int n)
 	int cnt;
 
 	if (!(n <= 0))
-		for (cnt = 0; cnt <= n; cnt++)
+		for (cnt = 0; cnt < n; cnt++)
 			_putchar('_');
 	_putchar('\n');
 }
