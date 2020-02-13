@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
+ * more_numbers - Print 10 lines of numbers counting from 0 - 14
  *
- *
- *
+ * Return: Nothing, function is void
  */
 
 void more_numbers(void)
