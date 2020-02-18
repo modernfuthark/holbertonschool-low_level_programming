@@ -10,14 +10,13 @@
 void print_array(int *a, int n)
 {
 	int i;
-	int checky;
 
 	if (n != 0)
 	{
-		for (i = 0; i <= checky; i++)
+		for (i = 0; i <= n - 1; i++)
 		{
 			printf("%d", a[i]);
-			if (i != checky)
+			if (i != n - 1)
 				printf(", ");
 		}
 	}
