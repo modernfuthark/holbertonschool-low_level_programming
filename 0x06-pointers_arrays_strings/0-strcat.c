@@ -11,14 +11,17 @@ char *_strcat(char *dest, char *src)
 	int i;
 	int desLen = 0;
 
-	while (dest[++desLen])
-		;
-
-	for (i = 0; src[i]; i++)
+	if (src)
 	{
-		dest[desLen + i] = src[i];
+		while (dest[++desLen])
+			;
+
+		for (i = 0; src[i]; i++)
+		{
+			dest[desLen + i] = src[i];
+		}
+		dest[desLen + i] = '\0';
 	}
-	dest[desLen + i] = '\0';
 
 	return (dest);
 }
