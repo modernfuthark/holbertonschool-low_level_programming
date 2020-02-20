@@ -8,6 +8,10 @@
 char *rot13(char *str)
 {
 	int i, j;
+
+	if (!(str))
+		return (NULL);
+
 	char al[] = {'a', 'A', 'b', 'B', 'c', 'C', 'd', 'D', 'e', 'E',
 		'f', 'F', 'g', 'G', 'h', 'H', 'i', 'I', 'j', 'J', 'k', 'K', 'l', 'L', 'm',
 		'M', 'n', 'N', 'o', 'O', 'p', 'P', 'q', 'Q', 'r', 'R', 's', 'S', 't', 'T',
