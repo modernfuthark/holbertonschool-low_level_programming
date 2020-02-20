@@ -11,10 +11,10 @@ char *_strcat(char *dest, char *src)
 	int i;
 	int desLen = 0;
 
-	while(dest[++desLen])
+	while (dest[++desLen])
 		;
 
-	for(i = 0; src[i]; i++)
+	for (i = 0; src[i]; i++)
 	{
 		dest[desLen + i] = src[i];
 	}
