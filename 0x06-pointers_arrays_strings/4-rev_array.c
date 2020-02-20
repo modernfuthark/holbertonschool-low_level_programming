@@ -10,16 +10,19 @@ void reverse_array(int *a, int n)
 {
 	int end, i, swap;
 
-	end = a[n - 1];
-
-	for (i = 0; i <= (n - 1) / 2; i++)
+	if (n && a)
 	{
-		swap = a[i];
-		a[i] = end;
-		if (i == 0)
-			end = a[(n - 1) - 1];
-		else
-			end = a[(n - 1) - 1 - i];
-		a[(n - 1) - i] = swap;
+		end = a[n - 1];
+
+		for (i = 0; i <= (n - 1) / 2; i++)
+		{
+			swap = a[i];
+			a[i] = end;
+			if (i == 0)
+				end = a[(n - 1) - 1];
+			else
+				end = a[(n - 1) - 1 - i];
+			a[(n - 1) - i] = swap;
+		}
 	}
 }
