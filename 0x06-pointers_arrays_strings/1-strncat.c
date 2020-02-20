@@ -1,22 +1,23 @@
 #include "holberton.h"
 /**
- * _strcat - Concatenates 2 strings
+ * _strncat - Concatenates 2 strings using n characters
  * @dest: Destination (to)
  * @src: Source (from)
+ * @n: Characters to copy
  * Return: Pointer to dest
  */
 
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 	int i;
 	int desLen = 0;
 
-	if (src && dest)
+	if (dest && src && n > 0)
 	{
 		while (dest[++desLen])
 			;
 
-		for (i = 0; src[i]; i++)
+		for (i = 0; src[i] && i < n; i++)
 		{
 			dest[desLen + i] = src[i];
 		}
