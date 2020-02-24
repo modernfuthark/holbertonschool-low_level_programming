@@ -11,27 +11,24 @@ char *_strstr(char *haystack, char *needle)
 {
 	int i = 0, trk, flg = 0;
 
-	if (haystack && needle)
+	for (trk = 0; haystack[trk]; trk++)
 	{
-		for (trk = 0; haystack[trk]; trk++)
+		if (haystack[trk] == needle[i])
 		{
-			if (haystack[trk] == needle[i])
+			for (i = 0; needle[i]; i++)
 			{
-				for (i = 0; needle[i]; i++)
+				if (haystack[trk + i] != needle[i])
 				{
-					if (haystack[trk + i] != needle[i])
-					{
-						flg = 1;
-						break;
-					}
+					flg = 1;
+					break;
 				}
-				if (flg == 0)
-				{
-					haystack += trk;
-					return (haystack);
-				}
-				flg = 0;
 			}
+			if (flg == 0)
+			{
+				haystack += trk;
+				return (haystack);
+			}
+			flg = 0;
 		}
 	}
 	return (NULL);
