@@ -26,7 +26,10 @@ char *_strstr(char *haystack, char *needle)
 					}
 				}
 				if (flg == 0)
-					return (haystack + trk);
+				{
+					haystack += trk;
+					return (haystack);
+				}
 				flg = 0;
 			}
 		}
