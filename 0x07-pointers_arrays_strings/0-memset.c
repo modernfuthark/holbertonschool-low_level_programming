@@ -12,12 +12,13 @@ char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
 
-	n--; /*Count like a computer!*/
-
-	for (i = 0; i <= n; i++)
+	if (s && b && n)
 	{
-		s[i] = b;
+		n--; /*Count like a computer!*/
+		for (i = 0; i <= n; i++)
+		{
+			s[i] = b;
+		}
 	}
-
 	return (s);
 }
