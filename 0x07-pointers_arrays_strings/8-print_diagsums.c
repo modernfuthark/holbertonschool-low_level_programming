@@ -9,25 +9,16 @@
 
 void print_diagsums(int *a, int size)
 {
-	/*int i = 0, j = 0, counter = 0, revCount = size - 1, sumFr = 0, sumBk = 0;*/
+	int i, sum1, sum2;
 
-
-	printf("%ls\n%d\n", a, size);
-	/*while (i < size)
+	for (i = 0; i < size * size; i += (size + 1))
 	{
-		while (j < size)
-		{
-			if (j == counter)
-				sumFr += a[i];
-			if (j == revCount)
-				sumBk += a[i];
-			j++;
-		}
-		j = 0;
-		counter++;
-		revCount--;
-		i++;
+		sum1 += a[i];
+	}
+	for (i = size - 1; i < size * size - 1; i += (size - 1))
+	{
+		sum2 += a[i];
 	}
 
-	printf("%d, %d\n", sumFr, sumBk);*/
+	printf("%d, %d\n", sum1, sum2);
 }
