@@ -9,13 +9,18 @@
 
 int main(int argc, char *argv[])
 {
-	int sum = 0, i, check;
+	int sum = 0, i, check, sub;
 
 	if (argc > 0)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			check = isdigit(*argv[i]);
+			for (sub = 0; argv[i][sub]; sub++)
+			{
+				check = isdigit(argv[i][sub]);
+				if (check == 0)
+					break;
+			}
 			if (check != 0)
 				sum += atoi(argv[i]);
 			else
