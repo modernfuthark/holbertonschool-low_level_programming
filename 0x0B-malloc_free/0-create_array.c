@@ -11,6 +11,9 @@ char *create_array(unsigned int size, char c)
 	char *fillMe;
 	unsigned int i;
 
+	if (size == 0)
+		return (NULL);
+
 	fillMe = malloc(sizeof(char) * size);
 	if (!fillMe)
 		return (NULL);
