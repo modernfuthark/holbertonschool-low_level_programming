@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * str_concat - Combine 2 strings
  * @s1: String 1
