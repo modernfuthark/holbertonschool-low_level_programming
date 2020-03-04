@@ -11,7 +11,11 @@ char *str_concat(char *s1, char *s2)
 	char *result;
 	int s1Len = 0, s2Len = 0, i;
 
-	if (!s1 || !s2)
+	if (!s1 && s2)
+		return (s2);
+	if (s1 && !s2)
+		return (s1);
+	if (!s1 && !s2)
 		return (NULL);
 
 	while (s1[++s1Len])
@@ -19,7 +23,7 @@ char *str_concat(char *s1, char *s2)
 	while (s2[++s2Len])
 		;
 
-	result = malloc(sizeof(char *) * (s1Len + s2Len));
+	result = malloc(sizeof(char) * (s1Len + s2Len) + 1);
 	if (!result)
 		return (NULL);
 
