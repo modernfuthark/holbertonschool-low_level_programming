@@ -19,7 +19,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n <= 0)
 		return (NULL);
 
-	n--; /*Count like a computer, please*/
 	while (s1[len1])
 		++len1;
 	while (s2[len2])
@@ -35,7 +34,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		result[i] = s1[i];
 	}
-	for (j = 0; j <= n; j++)
+	for (j = 0; j < n && s2[j]; j++)
 	{
 		result[i + j] = s2[j];
 	}
