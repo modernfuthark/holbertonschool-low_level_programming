@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * string_nconcat - Concat 2 strings by n bytes
  * @s1: String 1
@@ -26,7 +27,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n >= len2)
 		n = len2;
 
-	result = malloc(sizeof(char) * (len1 + n));
+	result = malloc(sizeof(char) * (len1 + n) + 1);
 	if (!result)
 		return (NULL);
 
