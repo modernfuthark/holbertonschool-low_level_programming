@@ -49,14 +49,14 @@ char *_strdup(char *str)
 	if (!str)
 		return (NULL);
 
-	while (str[++len])
-		;
+	while (str[len])
+		len++;
 
 	copy = malloc(sizeof(char) * len + 1);
 	if (!copy)
 		return (NULL);
 
-	for (i = 0; i <= len; i++)
+	for (i = 0; i < len; i++)
 	{
 		copy[i] = str[i];
 	}
