@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "function_pointers.h"
 /**
  * print_name - Print name using an external function
  * @name: Name to print
