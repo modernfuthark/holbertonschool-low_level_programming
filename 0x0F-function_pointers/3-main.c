@@ -7,7 +7,7 @@
  * Return: 0 on success, exit with 98, 99, and 100 on errors
  */
 
-int main(int argc, char *argv)
+int main(int argc, char *argv[])
 {
 	int res = 0, n1, n2;
 	int (*calc)(int, int);
@@ -27,7 +27,7 @@ int main(int argc, char *argv)
 		exit(99);
 	}
 
-	if (n2 == 0 && (argv[2][0] == '/' || argv[2][0] == '%'))
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && n2 == 0)
 	{
 		printf("Error\n");
 		exit(100);
