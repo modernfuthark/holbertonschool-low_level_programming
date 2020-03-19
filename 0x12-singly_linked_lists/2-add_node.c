@@ -8,7 +8,7 @@
  * Return: Adress of new element, NULL on fail
  */
 
-list_t *add_node_end(list_t **head, const char *str)
+list_t *add_node(list_t **head, const char *str)
 {
 	int len = 0;
 	list_t *temp;
