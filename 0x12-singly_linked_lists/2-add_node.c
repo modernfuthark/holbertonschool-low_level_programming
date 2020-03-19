@@ -1,8 +1,6 @@
 #include "lists.h"
-
-
 /**
- * add_node_end - Add a node to the end of a list
+ * add_node - Add a node to the list
  * @head: Head of the list
  * @str: Name to add to list
  * Return: Adress of new element, NULL on fail
