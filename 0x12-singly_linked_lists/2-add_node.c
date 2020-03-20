@@ -19,13 +19,9 @@ list_t *add_node(list_t **head, const char *str)
 	while (str[len])
 		++len;
 
-	if (str)
-	{
-		temp->len = len;
-		temp->str = copy;
-		temp->next = *head;
-		*head = temp;
-		return (temp);
-	}
-	return (NULL);
+	temp->len = len;
+	temp->str = copy;
+	temp->next = *head;
+	*head = temp;
+	return (temp);
 }
