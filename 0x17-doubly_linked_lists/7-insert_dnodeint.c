@@ -29,7 +29,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		*h = new;
 		return (new);
 	}
-
 	for (i = idx; i > 1; i--)
 	{
 		if (!temp) /*Index > len of list, free new and return NULL*/
@@ -41,14 +40,11 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	if (!temp)
 		return (NULL);
-
 	/*Update new's neighbors*/
 	new->next = temp->next;
 	new->prev = temp;
-
 	/*Introduce neighbors to new*/
 	new->next->prev = new;
 	new->prev->next = new;
-
 	return (new);
 }
