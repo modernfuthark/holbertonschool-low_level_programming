@@ -24,7 +24,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	if (idx == 0) /*Index is 0, create new head...*/
 	{
-		(*h)->prev = new;
+		if (*h)
+			(*h)->prev = new;
 		new->next = *h;
 		*h = new;
 		return (new);
@@ -44,7 +45,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	new->next = temp->next;
 	new->prev = temp;
 	/*Introduce neighbors to new*/
-	new->next->prev = new;
+	if (temp->next)
+		new->next->prev = new;
 	new->prev->next = new;
 	return (new);
 }
