@@ -39,11 +39,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	new->value = cval;
 	new->next = NULL;
+	new->key = strdup(key);
 
 	if (ht->array[idx] == NULL)
-	{
 		ht->array[idx] = new;
-	}
 	else
 	{
 		new->next = ht->array[idx];
