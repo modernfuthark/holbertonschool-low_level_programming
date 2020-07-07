@@ -21,6 +21,6 @@ def island_perimeter(grid):
                 if (j < GLi - 1 and grid[i][j + 1] == 0) or j == GLi:
                     TotalPerimeter += 1
                 # Check lower area
-                if (i < len(grid) - 1 and grid[i + 1][i] == 0):
+                if (i < len(grid) - 1 and grid[i + 1][j] == 0):
                     TotalPerimeter += 1
     return TotalPerimeter
